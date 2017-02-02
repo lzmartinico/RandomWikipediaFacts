@@ -1,0 +1,26 @@
+{
+  "name": "alexa-random-wikipedia-facts",
+  "version": "1.0.0",
+  "description": "Alexa skill to fetch random facts from Wikipedia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lzmartinico/RandomWikipediaFacts.git"
+  },
+  "keywords": [
+    "alexa"
+  ],
+  "author": "Lorenzo Martinico",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lzmartinico/RandomWikipediaFacts/issues"
+  },
+  "homepage": "https://github.com/lzmartinico/RandomWikipediaFacts#readme",
+  "dependencies": {
+    "alexa-sdk": "^1.0.6",
+    "request": "^2.79.0"
+  }
+}
