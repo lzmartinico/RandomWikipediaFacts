@@ -63,6 +63,7 @@ const handlers = {
             let jsonObject = JSON.parse(response);
             let pages = jsonObject.query.pages
             for (let p in pages){
+                    let title = pages[p].title
                     let rawText = pages[p].extract
                     // only save until the first newline
                     let nl = rawText.search(/\n/)
@@ -78,8 +79,9 @@ const handlers = {
                     rawText = rawText.replace(/\<[^\<\>]*\>/g,"")
                     // Create speech output
                     const speechOutput = this.t('GET_FACT_MESSAGE') + rawText;
-
-                    alexa.emit(':tellWithCard', speechOutput, this.t('SKILL_NAME'), "<speech>"+rawText+"</speech>");
+                    let pageUrl = "http://en.wikipedia.org/?curid="
+                    const cardText = "\n\n To see the full article open link at URL " 
+                    alexa.emit(':tellWithCard', speechOutput, this.t('SKILL_NAME') + ": " + title, rawText + cardText+ pageUrl + pages[p].pageid);
             }        
         }.bind(this));
     },
