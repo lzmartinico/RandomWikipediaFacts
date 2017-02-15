@@ -13,7 +13,7 @@ var request = require('request');
 
 const Alexa = require('alexa-sdk');
 
-const APP_ID = "amzn1.ask.skill.b91639b9-e856-4592-8f4b-14f0c29acdb6";
+const APP_ID = // INSERT APP ID HERE
 
 const randomAPIURL = '/w/api.php?action=query&format=json&prop=extracts&explaintext=&generator=random&grnnamespace=0&grnlimit=1'
 const languageStrings = {
